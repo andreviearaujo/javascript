@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input#txtp{
+            border-color: red;
+            border-style: groove;
+            background: rgb(247, 152, 152); 
+             }
+             input#btn {
+                 background: rgb(76, 214, 76);
+             }
+
+    </style>
+    <title>Pergunta</title>
+</head>
+<body>
+    <h1>Qual sua Nacionalidade</h1>
+    Qual é o seu país: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="conca()" id="btn">
+    <div id="res">
+
+    </div>    
+    <script>
+        function conca(){
+            var txt = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#res')
+            var nome = (txt.value)
+            var pais = 'Brasil'
+            if (pais == nome){
+                        res.innerHTML = `<p>O seu país é <strong>${nome}</strong> e você é  brasileiro!</p>`
+            }else {
+            res.innerHTML = `<p>O seu país é <strong>${nome}</strong> e você é estranjeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
